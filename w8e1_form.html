@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>JavaScript Form Handling<h2>
+<style>
+label{
+    margin:5px;
+    padding:8px;
+    float: left;
+    width: 70px;
+    clear: left;
+
+}
+input{
+    margin :5px;
+    padding :8px;
+}
+</style>
+</head>
+
+<body>
+<h1>Form validation </h1>
+<script>
+function validateForm(){
+    //alert("name:"+ document.forms[0].name.value);
+    //alert("age:"+ document.forms[0].age.value);
+    //alert("submit:"+ document.forms[0].submit.value);
+  
+    //name must be filled
+    if(document.forms[0].name.value==""){
+        alert("Name cannot be blank");
+        document.getElementById("name").value="Name cannot be blank";
+    }
+    //age >18 years
+    if(document.forms[0].age.value<=0){
+    alert("age must be >18");
+    }
+
+}
+</script>
+<form action="#" method="GET" onsubmit="validateForm()">
+<label>Name:</label>
+<input type="text" name="name"><br>
+<label>Age:</label>
+<input type="text" name="age"><br>
+<input type="submit" name="submit" value="Send Information" >
+
+</form>
+</body>
+</html>
